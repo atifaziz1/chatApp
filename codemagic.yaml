@@ -8,6 +8,7 @@ workflows:
         instance_type: mac_mini
         environment:
             vars:
+                APP_PASSWORD_ENV_VARIABLE: Encrypted(Z0FBQUFBQmhGOVBidDVvVEdmOTFCSTJoenBFMnhTU3Vld2Y4R3otS3ItemhaM0ZfdTVYWk9NYWVMZmc2bmNzYUd1RXBsNDRMUGJSN2h2V3UzUHk4T2h4THViaHprN0luclBjZVNwSHFoQUttaVRBZi03MWcyeFlJYk05SXUzdmFQc1VCZkJhWG01U2U=)
                 # GCLOUD_SERVICE_ACCOUNT_CREDENTIALS: Encrypted(...) # <-- Put encrypted CONTENTS of your Gloud crendentials file here
                 PACKAGE_NAME: "com.chatapp" # <-- Put your package name here e.g. com.domain.myapp
                 # CM_KEYSTORE: Encrypted(...) # <-- Put your encrypted keystore file here
