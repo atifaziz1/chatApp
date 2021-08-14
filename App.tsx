@@ -1,105 +1,96 @@
-import React from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+// import React, {useState, useCallback, useEffect} from 'react';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// import {SafeAreaView, StyleSheet, Text} from 'react-native';
+// import {GiftedChat} from 'react-native-gifted-chat';
+// import firestore from '@react-native-firebase/firestore';
+// import useFetch from './src/FirebaseUtils/services/FilmsArray';
 
-const Section: React.FC<{
-  title: string;
-}> = ({children, title}) => {
-  const isDarkMode = useColorScheme() === 'dark';
-  return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
-    </View>
-  );
-};
+// export {default} from './storybook';
 
-const App = () => {
-  const isDarkMode = useColorScheme() === 'dark';
+// const App = () => {
+//   const [messages, setMessages] = useState([]);
+//   const {loading, data, error} = useFetch({
+//     url: 'https://reactnative.dev/movies.json',
+//     method: 'get',
+//   });
+//   if (loading) {
+//     console.log('status of loading = ', loading);
+//   }
+//   if (data) {
+//     console.log('Having results = ', data);
+//   }
 
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
+//   if (error) {
+//     console.log('!!!ooppsss!!!', error);
+//   }
+//   useEffect(() => {
+//     const getData = async () => {
+//       firestore()
+//         .collection('users')
+//         .get()
+//         .then(docs => {
+//           docs.forEach(_doc => {
+//             console.log('==a3==', _doc._data);
+//           });
+//         });
+//     };
+//     getData();
+//     setMessages([
+//       {
+//         _id: 1,
+//         text: 'Hello developer',
+//         createdAt: new Date(),
+//         user: {
+//           _id: 2,
+//           name: 'React Native',
+//           avatar: 'https://placeimg.com/140/140/any',
+//         },
+//       },
+//     ]);
+//   }, []);
 
-  return (
-    <SafeAreaView style={backgroundStyle}>
-      <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
-      <ScrollView
-        contentInsetAdjustmentBehavior="automatic"
-        style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}>
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this
-            screen and then come back to see your edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">
-            Read the docs to discover what to do next:
-          </Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
-    </SafeAreaView>
-  );
-};
+//   const onSend = useCallback((messages = []) => {
+//     setMessages(previousMessages =>
+//       GiftedChat.append(previousMessages, messages),
+//     );
+//   }, []);
 
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
+//   return (
+//     <SafeAreaView style={{flex: 1, backgroundColor: 'red'}}>
+//       <Text style={{padding: 10, backgroundColor: '#d5d5d5', color: '#000000'}}>
+//         This is testing text
+//       </Text>
 
-export default App;
+//       <GiftedChat
+//         messages={messages}
+//         onSend={messages => onSend(messages)}
+//         user={{
+//           _id: 1,
+//         }}
+//       />
+//     </SafeAreaView>
+//   );
+// };
+
+// const styles = StyleSheet.create({
+//   sectionContainer: {
+//     marginTop: 32,
+//     paddingHorizontal: 24,
+//   },
+//   sectionTitle: {
+//     fontSize: 24,
+//     fontWeight: '600',
+//   },
+//   sectionDescription: {
+//     marginTop: 8,
+//     fontSize: 18,
+//     fontWeight: '400',
+//   },
+//   highlight: {
+//     fontWeight: '700',
+//   },
+// });
+
+// export default App;
+
+export {default} from './storybook';
